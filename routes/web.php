@@ -20,5 +20,5 @@ Route::get('/test', function () {
 });
 
 Route::get('/public', function () {
-    return "This is public"
+    return "This is public";
 });
