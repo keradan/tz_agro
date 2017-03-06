@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/test', function () {
+    return ['some' => 'text'];
+});
+
+Route::get('/public', function () {
+    return "This is public"
+});
