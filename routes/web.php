@@ -21,5 +21,5 @@ Route::get('/testdb', function () {
 });
 
 Route::get('/test/branches', function () {
-    return "If you see this it is a good sign that all is okey now";
+    return "If you see this it is a good sign that all is very okey now";
 });
