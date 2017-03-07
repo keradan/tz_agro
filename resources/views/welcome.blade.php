@@ -81,6 +81,11 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
+                <p>
+                    typo zelya dobavil 
+					<br> and some else
+				</p>
+				
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
