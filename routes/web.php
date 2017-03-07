@@ -16,6 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('/testdb', function () {
-    $users = App\Users::get();
+    $users = App\User::get();
     return $users;
 });
