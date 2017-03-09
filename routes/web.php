@@ -21,7 +21,3 @@ Route::get('/testdb', function () {
     $users = App\User::get();
     return $users;
 });
-
-Route::get('/test/branches', function () {
-    return "If you see this it is a good sign that all is very okey now";
-});
