@@ -1,5 +1,7 @@
 /public/.htaccess
 
+/node_modules
+
 .env
 
 .htaccess
