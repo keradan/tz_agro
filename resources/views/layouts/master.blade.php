@@ -7,15 +7,19 @@
     <meta name="author" content="">
 
     <link rel="stylesheet" href="{{ url('css/site.css?no_cache=' . time()) }}">
-	<script src=""></script>
 
     <title>TZ agro</title>
 </head>
 <body>
-	@include ('partials.nav')
-	<div>
-		map
-	</div>
+
+	@yield ('map')
+
+	@if (Auth::check())
+		<p>имя - {{ Auth::user()->name }}</p>
+		<a href="{{ url('logout') }}">Выйти</a>
+	@endif
+
+	@include ('site.partials.nav')
 	<div class="content">
 		@yield ('content')
 	</div>

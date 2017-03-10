@@ -10,14 +10,14 @@ if (env('APP_ENV') == 'production') {
 	}
 }
 
-Route::get('/', function () {
-    return view('site.main');
-});
+Route::get('/', 'SiteController@malls_map')->name('home');
+Route::get('/malls', 'SiteController@malls_list');
+Route::get('/malls/{id}', 'SiteController@mall_details');
 
-Route::get('/admin', function () {
-    return view('admin.main');
-});
-Route::get('/testdb', function () {
-    $users = App\User::get();
-    return $users;
-});
+Route::get('/map_data', 'MapController@json')->name('map_data');
+
+Route::get('/login', 'SessionsController@create')->name('login');
+Route::post('/login', 'SessionsController@store');
+Route::get('/logout', 'SessionsController@destroy');
+
+Route::get('/admin', 'AdminController@index')->name('admin');

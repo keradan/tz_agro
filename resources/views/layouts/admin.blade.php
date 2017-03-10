@@ -15,7 +15,7 @@
 	</div>
 
 	<div>
-		@include ('partials.admin_nav')
+		@include ('admin.partials.nav')
 	</div>
 
 	<div class="content">
@@ -23,7 +23,7 @@
 	</div>
 		
 	<div class="footer">
-		@include ('partials.admin_footer')
+		@include ('admin.partials.footer')
 	</div>
 
     <script src="{{ url('js/admin.js?no_cache=' . time()) }}"></script>
