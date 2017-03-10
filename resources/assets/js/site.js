@@ -1,1 +1,2 @@
-require('./site/some.js');
+require('./site/helpers.js');
+require('./site/map.js');

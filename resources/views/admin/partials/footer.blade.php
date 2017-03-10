@@ -1,3 +1,1 @@
-<p>
-	this is admin footer
-</p>
+<p>&copy; Vincent Gabriel 2013</p>

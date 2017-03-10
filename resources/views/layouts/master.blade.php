@@ -14,17 +14,15 @@
 
 	@yield ('map')
 
-	@if (Auth::check())
-		<p>имя - {{ Auth::user()->name }}</p>
-		<a href="{{ url('logout') }}">Выйти</a>
-	@endif
-
-	@include ('site.partials.nav')
 	<div class="content">
 		@yield ('content')
 	</div>
 
-    <script src="{{ url('js/site.js?no_cache=' . time()) }}"></script>
+ <!--    <script src="{{ url('js/site.js?no_cache=' . time()) }}"></script> -->
+    <script src="js/site/helpers.js"></script>
+    <script src="js/site/map.js"></script>
+
+<!--
 	<script type="text/javascript">
 		function loadFile(path) {
 		    var xhr = new XMLHttpRequest();
@@ -62,5 +60,6 @@
 			}, 2000);
 		}, 0);
 	</script>
+-->
 </body>
 </html>

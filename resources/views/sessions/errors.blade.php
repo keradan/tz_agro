@@ -1,6 +1,7 @@
 @if (count($errors))
-	<div style="color:red">
-		<ul>
+	<div class="alert alert-error">
+		<button class="close" data-dismiss="alert">×</button>
+		<ul> <strong>Errors:</strong>
 			@foreach ($errors->all() as $error)
 				<li> {{ $error }} </li>
 			@endforeach

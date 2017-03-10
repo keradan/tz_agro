@@ -22,7 +22,7 @@ class SiteController extends Controller
 
     public function mall_details($id)
     {
-        $mall = 'here details of mall by id: ' . $id;
+        $mall = Mall::find($id);
         return view('site.malls.details', compact('mall'));
     }
 
