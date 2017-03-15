@@ -3,7 +3,6 @@
 /**
  * Переадресация с адресов в которых присутствует 'public' или 'index.php'
  */
-
 if (env('APP_ENV') == 'production') {
 	if (strpos($_SERVER['REQUEST_URI'], 'public') !== false || strpos($_SERVER['REQUEST_URI'], 'index.php') !== false) {
 		header('Location: http://' . $_SERVER['HTTP_HOST']);
@@ -11,15 +10,14 @@ if (env('APP_ENV') == 'production') {
 	}
 }
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'SiteController@malls_map')->name('home');
+Route::get('/malls', 'SiteController@malls_list');
+Route::get('/malls/{id}', 'SiteController@mall_details');
 
-Route::get('/testdb', function () {
-    $users = App\User::get();
-    return $users;
-});
+Route::get('/map_data', 'MapController@json')->name('map_data');
 
-Route::get('/test/branches', function () {
-    return "If you see this it is a good sign that all is very okey now";
-});
+Route::get('/login', 'SessionsController@create')->name('login');
+Route::post('/login', 'SessionsController@store');
+Route::get('/logout', 'SessionsController@destroy');
+
+Route::get('/admin', 'AdminController@index')->name('admin');
