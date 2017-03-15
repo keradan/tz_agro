@@ -7,6 +7,9 @@
     <meta name="author" content="">
 
     <link rel="stylesheet" href="{{ url('css/site.css?no_cache=' . time()) }}">
+    
+    <!-- <script src="js/site/helpers.js"></script>
+    <script src="js/site/map.js"></script> -->
 
     <title>TZ agro</title>
 </head>
@@ -19,8 +22,7 @@
 	</div>
 
  <!--    <script src="{{ url('js/site.js?no_cache=' . time()) }}"></script> -->
-    <script src="js/site/helpers.js"></script>
-    <script src="js/site/map.js"></script>
+
 
 <!--
 	<script type="text/javascript">
@@ -61,5 +63,15 @@
 		}, 0);
 	</script>
 -->
+
+	<script>
+		var map;
+		function initMap() {
+			map = new google.maps.Map(document.getElementById('map'), {
+				center: {lat: 50.44028798, lng: 30.52993298},
+				zoom: 12,
+			});
+		}
+	</script>
 </body>
 </html>

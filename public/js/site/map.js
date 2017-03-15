@@ -7,8 +7,16 @@ var placesService;
 var partners;
 var show_partners;
 
-function initMap() {
 
+loadJSON('http://localhost/tz_agro/public/map_data', function(json) {
+	partners = json;
+	show_partners = Object.keys(partners);
+	runMap();
+},function(xhr) {
+	console.error(xhr);
+});
+
+function initMap() {
 	map = new google.maps.Map(document.getElementById('map'), {
 		center: {lat: 50.44028798, lng: 30.52993298},
 		zoom: 12,
@@ -16,14 +24,6 @@ function initMap() {
 
 	infoWindow = new google.maps.InfoWindow();
 	placesService = new google.maps.places.PlacesService(map);
-
-	loadJSON('https://tzagro.000webhostapp.com/db.json?sdf=sdf', function(json) {
-		partners = json;
-		show_partners = Object.keys(partners);
-		runMap();
-	},function(xhr) {
-		console.error(xhr);
-	});
 }
 
 function textSearch (){
