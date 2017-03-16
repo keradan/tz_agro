@@ -14,11 +14,11 @@
     <title>TZ agro</title>
 </head>
 <body>
-
-	@yield ('map')
-
-	<div class="content">
-		@yield ('content')
+	<div id="app">
+		@yield ('map')
+		<div class="content">
+			@yield ('content')
+		</div>
 	</div>
 
  <!--    <script src="{{ url('js/site.js?no_cache=' . time()) }}"></script> -->
@@ -64,14 +64,7 @@
 	</script>
 -->
 
-	<script>
-		var map;
-		function initMap() {
-			map = new google.maps.Map(document.getElementById('map'), {
-				center: {lat: 50.44028798, lng: 30.52993298},
-				zoom: 12,
-			});
-		}
-	</script>
+	@yield ('map_script')
+	
 </body>
 </html>

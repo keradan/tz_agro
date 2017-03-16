@@ -15,10 +15,11 @@ class CreateMallsTable extends Migration
     {
         Schema::create('malls', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('place_id')->unique();
             $table->string('name')->unique();
-            $table->string('subway');
+            $table->string('place_id')->unique();
+            $table->string('location')->unique();
             $table->text('polygon_coords');
+            $table->string('subway');
             $table->integer('status');
             $table->timestamps();
         });
