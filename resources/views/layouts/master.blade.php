@@ -21,7 +21,7 @@
 		</div>
 	</div>
 
- <!--    <script src="{{ url('js/site.js?no_cache=' . time()) }}"></script> -->
+ <!--    <script  src="{{ url('js/site.js?no_cache=' . time()) }}"></script> -->
 
 
 <!--
