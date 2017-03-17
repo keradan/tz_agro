@@ -8,9 +8,9 @@
 		
 		<title>TZ agro admin page</title>
 
-		<!--  <link rel="stylesheet" href="{{ url('css/admin.css?no_cache=' . time()) }}"> -->
+		<link rel="stylesheet" href="{{ url('css/admin.css?no_cache=' . time()) }}">
 
-        <!-- Bootstrap -->
+        <!-- 
         <link href="css/bootstrap.css" rel="stylesheet">
 
         <link href="css/styles.css" rel="stylesheet">
@@ -18,7 +18,7 @@
         <link href="css/fullcalendar.css" rel="stylesheet">
 		<link href="css/easypiechart.css" rel="stylesheet">
 		<link href="css/wysihtml5.css" rel="stylesheet">
-        <link href="css/jgrowl.css" rel="stylesheet">
+        <link href="css/jgrowl.css" rel="stylesheet"> -->
     </head>
     <body>
         @include ('admin.partials.top')
@@ -60,12 +60,7 @@
 	            @include ('admin.partials.footer')
             </footer>
         </div>
-        <!--/.fluid-container-->
-        <script src="js/jquery.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/scripts.js"></script>
-        <script src="js/modernizr.js"></script>
 
-        <!-- <script src="{{ url('js/admin.js?no_cache=' . time()) }}"></script> -->
+        <script src="{{ url('js/admin.js?no_cache=' . time()) }}"></script>
     </body>
 </html>

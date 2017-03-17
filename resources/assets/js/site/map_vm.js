@@ -1,12 +1,5 @@
-function initMap() {
-	setTimeout(function() {
-		vm.map = new google.maps.Map(document.getElementById('map'), {
-			center: {lat: 50.44028798, lng: 30.52993298},
-			zoom: 12
-		});
-	}, 0); 
-}
-
+var Vue = require('vue');
+var axios = require('axios');
 var vm;
 vm = new Vue({
 	el: '#app',
@@ -189,3 +182,4 @@ vm = new Vue({
 		axios.get('/tz_agro/public/api/malls').then(response => this.malls_data = response.data);
 	},
 });
+window.vm = vm;
