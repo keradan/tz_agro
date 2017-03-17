@@ -8,9 +8,6 @@
 
     <link rel="stylesheet" href="{{ url('css/site.css?no_cache=' . time()) }}">
     
-    <!-- <script src="js/site/helpers.js"></script>
-    <script src="js/site/map.js"></script> -->
-
     <title>TZ agro</title>
 </head>
 <body>
@@ -20,6 +17,7 @@
 			@yield ('content')
 		</div>
 	</div>
+	@yield ('map_script')
 
  <!--    <script  src="{{ url('js/site.js?no_cache=' . time()) }}"></script> -->
 
@@ -63,8 +61,6 @@
 		}, 0);
 	</script>
 -->
-
-	@yield ('map_script')
 	
 </body>
 </html>
