@@ -15,6 +15,7 @@ class MallsTableSeeder extends Seeder
 		$malls = json_decode('{
 			"ChIJbyssX1DO1EARSVCSAsOLcDw" : {
 				"name" : "ТРЦ Глобус",
+				"location" : {"lat":50.4509779,"lng":30.522565600000007},
 				"status" : "3",
 				"subway" : "maydan",
 				"polygon_coords" : [
@@ -26,6 +27,7 @@ class MallsTableSeeder extends Seeder
 			},
 			"ChIJFRDJNVPF1EARaJOEysR5MOk" : {
 				"name" : "ТРК \"Проспект\"",
+				"location" : {"lat":50.45473399999999,"lng":30.635591999999974},
 				"status" : "3",
 				"subway" : "chern",
 				"polygon_coords" : [
@@ -52,6 +54,7 @@ class MallsTableSeeder extends Seeder
 			},
 			"ChIJH-gHA_7O1EARkrSgsMM08gE" : {
 				"name" : "Гулливер",
+				"location" : {"lat":50.4387279,"lng":30.523172599999953},
 				"status" : "3",
 				"subway" : "palac_sportu",
 				"polygon_coords" : [
@@ -64,6 +67,7 @@ class MallsTableSeeder extends Seeder
 			},
 			"ChIJz1zRbVvF1EARpAsWRxohgJg" : {
 				"name" : "ТЦ Дарница",
+				"location" : {"lat":50.4425561,"lng":30.624032599999964},
 				"status" : "2",
 				"subway" : "chern",
 				"polygon_coords" : [
@@ -84,6 +88,7 @@ class MallsTableSeeder extends Seeder
 			},
 			"ChIJ_6VNke_P1EARwx70oDQk_f0" : {
 				"name" : "ТРЦ «Комод»",
+				"location" : {"lat":50.4534876,"lng":30.598226599999975},
 				"status" : "2",
 				"subway" : "levober",
 				"polygon_coords" : [
@@ -107,6 +112,7 @@ class MallsTableSeeder extends Seeder
 			},
 			"ChIJT8LmwX3F1EARjio6pVZfLQk" : {
 				"name" : "ТРЦ Silver Breeze",
+				"location" : {"lat":50.4288706,"lng":30.59368619999998},
 				"status" : "2",
 				"subway" : "levober",
 				"polygon_coords" : [
@@ -120,6 +126,7 @@ class MallsTableSeeder extends Seeder
 			},
 			"ChIJg6VB2UzE1EARjyR88wzZxbs" : {
 				"name" : "Аладдін",
+				"location" : {"lat":50.39590299999999,"lng":30.63243},
 				"status" : "2",
 				"subway" : "hark",
 				"polygon_coords" : [
@@ -135,6 +142,7 @@ class MallsTableSeeder extends Seeder
 			},
 			"ChIJFSAEfFLE1EARkJ7L8H69xt0" : {
 				"name" : "ТЦ Пирамида",
+				"location" : {"lat":50.3977521,"lng":30.63826599999993},
 				"status" : "1",
 				"subway" : "hark",
 				"polygon_coords" : [
@@ -160,6 +168,7 @@ class MallsTableSeeder extends Seeder
 		        'name' => $details["name"],
 		        'subway' => $details["subway"],
 				'status' => $details["status"],
+				'location' => $details["location"]["lat"] . ':' . $details["location"]["lng"],
 		        'polygon_coords' => implode(';', array_map(function ($coords) {
 					return $coords["lat"] . ':' . $coords["lng"];
 				}, $details["polygon_coords"]))

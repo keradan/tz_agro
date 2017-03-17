@@ -14,7 +14,9 @@ Route::get('/', 'SiteController@malls_map')->name('home');
 Route::get('/malls', 'SiteController@malls_list');
 Route::get('/malls/{id}', 'SiteController@mall_details');
 
-Route::get('/map_data', 'MapController@json')->name('map_data');
+Route::get('/api/malls', 'MapController@markers');
+Route::get('/api/malls/filters', 'MapController@filters');
+Route::get('/api/malls/{place_id}', 'MapController@marker_info');
 
 Route::get('/login', 'SessionsController@create')->name('login');
 Route::post('/login', 'SessionsController@store');
